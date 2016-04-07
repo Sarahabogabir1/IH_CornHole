@@ -1,0 +1,34 @@
+<!-- views/add.erb -->
+<!doctype html>
+<html>
+<head>
+  <title>Online Calculator</title>
+</head>
+<body>
+	<img src="/logo.jpg" width="200"><br><br>
+	<% if @sign != nil%>
+		<%= @promt %><br>
+		<h3><%= @operation.do_it.to_s %></h3>
+	<% end %>
+	
+	<form action="/" method="post">
+	  	<label for="number">Input the <b>values</b> you want:</label><br><br>
+		<input type="number" name="Number1" placeholder="Enter first number" id="number">
+		<input type="number" name="Number2" placeholder="Enter second number" id="number"><br>
+
+		<button type="submit" name="button" value="Add">Add</button>
+		<button type="submit" name="button" value="Subtract">Subtract</button>
+		<button type="submit" name="button" value="Multiply">Multiply</button>
+		<button type="submit" name="button" value="Divide">Divide</button>
+	</form>
+
+	<% if @sign != nil%>
+			<br><br>
+		<form action="/store" method="post">
+			<button type="submit" name="store" value=<%= @operation.do_it.to_s %>> Store
+			</button>
+		</form>
+	<% end %>
+	
+</body>
+</html>
