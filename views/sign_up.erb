@@ -1,0 +1,47 @@
+<!-- HTML -->
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>SCORE KEEPER</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/design.css">
+
+</head>
+<body>
+	<center>
+	<%if @submit!="yes"%>
+		<header class="signup"></header>
+		<a href="/"><span class="login_title"><%= @title %></span></a><br>
+		<span class="login_slogan"><%= @slogan %></span>
+
+		<section class="login">
+			<form action="/sign_up" method="post">
+				<input class="half" type="text" name="fname" placeholder="Your first name" value="">
+				<input class="half" type="text" name="lname" placeholder="Your last name" value=""><br>
+				<input class="full" type="text" name="email" placeholder="Enter your email" value=""><br>
+				<input class="half" type="text" name="nickname" placeholder="Choose a nickname" value="">
+				<input class="half" type="password" name="pin" maxlength="4" placeholder="create a 4 digit PIN" value=""><br>
+				<button name="submit" value="yes">Sign Up</button>
+			</form>
+		</section>	
+	<% else %>
+		<div class="signupsuccess">
+			Thanks for signing up <%= "#{@fname} #{@lname}" %>
+		</div>
+		<a href="/"><button>Home Page</button></a>
+	<% end %>
+
+	</center>
+</body>
+</html>

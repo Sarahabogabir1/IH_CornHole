@@ -1,0 +1,22 @@
+---
+players:
+- !ruby/object:Player
+  first_name: Al
+  last_name: Delcy
+  nickname: aldelcy
+  email: aldelcy2000@gmail.com
+  pin: '1234'
+  stat:
+    :win: 0
+    :losse: 0
+    :tie: 0
+- !ruby/object:Player
+  first_name: Al
+  last_name: Delcy
+  nickname: aldelcy
+  email: aldelcy2000@gmail.com
+  pin: '1234'
+  stat:
+    :win: 0
+    :losse: 0
+    :tie: 0

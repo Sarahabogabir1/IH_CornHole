@@ -1,0 +1,68 @@
+<!-- HTML -->
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<title>SCORE KEEPER</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/design.css">
+
+</head>
+<body>
+
+
+	<% if session[:nickname]==nil %>
+
+		<center>
+		<header class="login"></header>
+		<a href="/"><span class="login_title"><%= @title %></span></a><br>
+		<span class="login_slogan"><%= @slogan %></span>
+
+		<section class="login">
+			<form action="/" method="post">
+				<input type="text" name="nickname" placeholder="nickname">
+				<input type="password" name="pin" maxlength="4" placeholder="enter pin"><br>
+				<button name="submit" value="yes"> Login</button>
+			</form><br><br>
+			Wanna track your stats?<br>
+			<a href="/sign_up">> Create a Profile <</a>
+		</section>	
+		</center>
+
+	<% elsif session[:nickname] %>
+
+		<div class="container-fluid">
+			<div class="row header">
+			    <div class="col-sm-3" style="text-align: left;">
+			    	<b>Wecome</b> <a href="#"><%= session[:nickname] %></a>
+			    </div>
+
+			    <div class="col-sm-6" style="text-align: center;">
+			    	<a href="/"><span class="top_header"><%= @title %></span></a>
+			    </div>
+
+			    <div class="col-sm-3" style="text-align: right;">	
+			    	<a href="#">Settings</a> | <a href="/logout">logout</a>
+
+			    </div>
+			</div>
+			<div class="row">
+				<header class="home"></header>
+			</div>
+		</div>
+
+	<%end%>
+</body>
+</html>

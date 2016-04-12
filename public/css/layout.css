@@ -1,0 +1,56 @@
+body{
+	margin: 0;
+	background-color:#00D5FF;
+	color: #fff;
+}
+a, a:visited{color: #ddd;}
+a:hover{color: #000; text-decoration: none;}
+
+
+header{
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position:top center;
+	background-attachment: fixed;
+	margin-bottom: 10%;
+    position: relative;
+	text-align: center;
+}
+header.login{
+	padding-top: 25%;
+	background-image: url('/img/frontpage.jpg');
+}
+header.signup{
+	padding-bottom: 15%;
+	background-image: url('/img/signup.jpg');
+	margin-bottom: 3%;
+}
+header.home{
+	padding-bottom: 15%;
+	background-image: url('/img/home.jpg');
+	margin-bottom: 3%;
+}
+
+header span{
+	color: #fff;
+	font-size: 20px;
+}
+
+
+.header{
+	max-width: 1100px; margin: 20px auto;
+}
+
+
+section.login{
+	margin: 50px auto 10px;
+	max-width: 500px;
+	text-align: center;
+}
+
+.signupsuccess{
+	max-width: 500px;
+	background-color: #fff; padding:50px 0px; margin: 50px auto 10px; 
+	color:#00D5FF; text-align: center; font-size: 17px; font-weight: bold;
+	border-radius: 10px;
+}

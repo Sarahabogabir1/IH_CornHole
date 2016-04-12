@@ -1,0 +1,78 @@
+input, button{
+	height:35px;
+	padding: 5px 10px;
+	margin: 5px 2px 5px;
+	font-size: 17px;
+	text-align: center;
+	border-radius: 5px;
+	border: 0px;
+	color: #444;
+}
+input.half{
+	width: 48%;
+	margin:3px 5px;
+	float: left;
+	display: inline-block;
+}
+input.half{
+	width: 48%;
+	margin:3px 5px;
+	float: left;
+	display: inline-block;
+}
+input.full{
+	width: 98%;
+	margin:3px 5px;
+	float: left;
+	display: inline-block;
+}
+button{
+	background-color: #000;
+	color: #fff;
+} button:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------*/
+
+::-webkit-input-placeholder{
+   color: #ccc;
+}
+:-moz-placeholder{
+   color: #ccc;  
+}
+::-moz-placeholder{
+   color: #ccc;  
+}
+:-ms-input-placeholder{  
+   color: #ccc;  
+}
+
+.login_title{font-family:'AveFedan'; font-size: 60px; font-weight: lighter; color: white;}
+.login_slogan{ font-size: 20px; color: white;}
+
+.top_header{font-family:'AveFedan'; font-size: 30px; color: white; margin-bottom: 20px;}
+
+@font-face {
+    font-family:"AveFedan";
+    src: url("/fonts/ave_fedan/AveFedan.ttf") format("truetype");
+}
+
+
+@media only screen and (max-width: 480px) {
+	.login_title{font-size: 40px;}
+}
+@media only screen and (min-width: 481px) {
+}
+@media only screen and (min-width: 769px) {
+}

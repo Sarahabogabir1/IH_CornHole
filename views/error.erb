@@ -1,0 +1,35 @@
+<!-- HTML -->
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>SCORE KEEPER</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/design.css">
+
+</head>
+<body>
+	<center>
+
+		<header class='<%= @error_class %>'></header>
+		<a href="/"><span class="login_title"><%= @title %></span></a><br>
+		<span class="login_slogan"><%= @slogan %></span>
+
+		<div class="signupsuccess" style="color: red;">
+			<%= "#{@error}" %>
+		</div>
+		<a href='<%= @back_url %>'><button>Go Back</button></a>
+
+	</center>
+</body>
+</html>
