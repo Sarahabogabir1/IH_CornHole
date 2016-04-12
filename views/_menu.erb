@@ -1,0 +1,13 @@
+<div class="row header">
+	<div class="col-sm-3" style="text-align: left;">
+    	<b>Wecome</b> <a href="#"><%= session[:nickname] %></a>
+   </div>
+
+    <div class="col-sm-6" style="text-align: center;">
+		<a href="/"><span class="top_header"><%= @title %></span></a>
+	</div>
+
+	<div class="col-sm-3 home_setting">	
+		<a href="#">Settings</a> | <a href="/logout">logout</a>
+	</div>
+</div>

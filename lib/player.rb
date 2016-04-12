@@ -1,12 +1,13 @@
 require 'yaml/store'
 
 class Player
-	attr_accessor :first_name, :last_name, :nickname, :email, :pin, :message
+	attr_accessor :first_name, :last_name, :nickname, :email, :pin, :profile_pic, :message
 	attr_reader :stat
 	def initialize (fname, lname, nickname, email, pin)
 		@last_name, @first_name = lname, fname
 		@nickname = nickname
 		@pin, @email = pin, email
+		@profile_pic = "#{@nickname}.jpg"
 		@stat = {:win => 0, :losse => 0, :tie => 0}
 	end
 

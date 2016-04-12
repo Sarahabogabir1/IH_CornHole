@@ -3,7 +3,7 @@ body{
 	background-color:#00D5FF;
 	color: #fff;
 }
-a, a:visited{color: #ddd;}
+a, a:visited{color: #fff;}
 a:hover{color: #000; text-decoration: none;}
 
 
@@ -53,4 +53,18 @@ section.login{
 	background-color: #fff; padding:50px 0px; margin: 50px auto 10px; 
 	color:#00D5FF; text-align: center; font-size: 17px; font-weight: bold;
 	border-radius: 10px;
+}
+
+.home_setting{
+	text-align: right;
+} 
+
+@media only screen and (max-width: 480px) {
+	.home_setting{
+		position: absolute; top:20px; right: 10px;
+	}
+}
+@media only screen and (min-width: 481px) {
+}
+@media only screen and (min-width: 769px) {
 }

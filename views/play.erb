@@ -1,0 +1,46 @@
+<%= erb :_header %>
+
+	<% if session[:nickname]==nil %>
+
+		<center>
+		<% redirect "/" %>
+		</center>
+
+	<% elsif session[:nickname] %>
+		<%= erb :_menu %>
+		<div class="container-fluid">
+			<header class="home">
+				<div>  </div>
+			</header>
+		</div>
+
+		<div class="container">
+			<div class="row" style="text-align: center;">
+				<span style=" font-size: 30px; font-weight: bold;">ROUND 4</span>
+				<hr size="1" style="margin: 5px auto 40px;">
+			</div>
+			<div class="row">
+				<div class="col-sm-6" style="text-align: center;">
+					<div class="profile_pic" style="background-image: url('/img/profile/aldelcy.jpg');"></div><br><br>
+						<span style=" font-size: 30px; font-weight: bold;">5</span>
+					<br><br>
+					<button>Board</button>
+					<button>Ring</button>
+					<button>Hole</button>
+					<button> 💀 Push</button>
+				</div>
+				<div class="col-sm-6" style="text-align: center;">
+					<div class="profile_pic" style="background-image: url('/img/profile/bianca.jpg');"></div><br><br>
+						<span style=" font-size: 30px; font-weight: bold;">3</span>
+					<br><br>
+					<button>Board</button>
+					<button>Ring</button>
+					<button>Hole</button>
+					<button> 💀 Push</button>
+				</div>
+			</div>
+		</div>
+
+	<%end%>
+
+<%= erb :_footer %>

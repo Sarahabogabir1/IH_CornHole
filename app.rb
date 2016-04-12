@@ -4,6 +4,8 @@ require_relative "lib/player.rb"
 require_relative "lib/login.rb"
 require_relative "lib/team.rb"
 
+require_relative "database/database.rb"
+
 enable(:sessions)
 
 title = "Score Keeper0"
@@ -42,19 +44,19 @@ post "/?" do
 	end
 end
 
-get "/logout" do
+get "/logout/?" do
 	session.clear
 	redirect "/"
 end
 
 
-get "/sign_up" do
+get "/sign_up/?" do
 	@title = title
 	@slogan = slogan
 	erb(:sign_up)
 end
 
-post "/sign_up" do
+post "/sign_up/?" do
 	@fname = params[:fname]
 	@lname = params[:lname]
 	nickname = params[:nickname]
@@ -86,5 +88,20 @@ post "/sign_up" do
 		@back_url = session[:my_previous_url]
 		erb(:error)
 	end
+
+end
+
+get "/play_game/?" do
+	@title = title
+	@slogan = slogan
+
+	game = Dumy_database.new
+
+	
+	
+	erb(:play)
+end
+
+post "/play_game/?" do
 
 end
